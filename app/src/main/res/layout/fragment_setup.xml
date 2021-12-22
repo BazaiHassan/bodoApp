@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfe6e9"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <soup.neumorphism.NeumorphImageView
+        android:layout_marginVertical="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        app:neumorph_shapeAppearance="@style/ShapeAppearance.Neumorph.ImageView"
+        app:srcCompat="@drawable/ic_smartwatch_amico" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/etName"
+            android:fontFamily="@font/vazir"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="#DFE4E6"
+            android:hint="نام شما"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="normal" />
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:fontFamily="@font/vazir"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="#DFE4E6"
+            android:hint="وزن (کیلوگرم)"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="normal" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/tvContinue"
+        android:fontFamily="@font/vazir_bold"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        app:neumorph_shadowElevation="@dimen/_5sdp"
+        app:neumorph_shadowColorDark="@color/background"
+        app:neumorph_backgroundColor="#c7ecee"
+        android:text="بزن بریم"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
