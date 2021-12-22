@@ -9,6 +9,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.masterdev.bodo.R
 import com.masterdev.bodo.services.TrackingService
 import com.masterdev.bodo.ui.viewmodels.MainViewModel
+import com.masterdev.bodo.utils.Constants.ACTION_START_OR_RESUME_SERVICE
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tracking.*
 
@@ -22,6 +23,10 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mapView.onCreate(savedInstanceState)
+        btnToggleRun.setOnClickListener {
+            sendCommandService(ACTION_START_OR_RESUME_SERVICE)
+        }
+
         mapView.getMapAsync {
             map = it
         }
@@ -62,5 +67,7 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
         super.onSaveInstanceState(outState)
         mapView?.onSaveInstanceState(outState)
     }
+
+
 
 }
