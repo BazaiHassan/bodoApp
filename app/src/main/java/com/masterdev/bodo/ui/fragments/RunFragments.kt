@@ -76,4 +76,6 @@ class RunFragments : Fragment(R.layout.fragment_run), EasyPermissions.Permission
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
 
+    //Just For test
+    private val s:String = ""
 }
